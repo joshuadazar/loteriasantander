@@ -1,0 +1,17 @@
+{
+  "name": "wordpress",
+  "version": "1.0.0",
+  "description": "wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel wp-content/themes/loteriasantander/js/main.js --out-dir wp-content/themes/loteriasantander/ --out-file index.js",
+    "dev": "npm run build && node-sass --watch wp-content/themes/loteriasantander/scss -o wp-content/themes/loteriasantander/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "parcel-bundler": "^1.12.5"
+  }
+}

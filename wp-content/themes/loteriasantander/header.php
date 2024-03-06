@@ -9,5 +9,5 @@
 <body <?php body_class(); ?>>
     <header>
         <!-- Your header content goes here -->
-
+        <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
     </header>

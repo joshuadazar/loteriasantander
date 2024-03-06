@@ -1,0 +1,7 @@
+@import "./utils/normalize";
+@import "./utils/breakpoints";
+@import "./utils/colors";
+
+body {
+  background-color: $primary;
+}

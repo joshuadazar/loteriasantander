@@ -20,6 +20,8 @@
 
 # Configuration
 wp-config.php
+/node_modules/
+.cache/
 
 # Example themes
 /wp-content/themes/twenty*/
