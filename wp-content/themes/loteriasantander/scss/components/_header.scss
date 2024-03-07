@@ -1,0 +1,13 @@
+@import "../utils/index.scss";
+@import "./patterns/index.scss";
+
+.header {
+  background-color: $gray-light;
+  color: $black;
+  display: flex;
+
+  .header__logo {
+    height: 50px;
+    width: 50px;
+  }
+}

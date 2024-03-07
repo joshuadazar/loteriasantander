@@ -1,7 +1,16 @@
-@import "./utils/normalize";
-@import "./utils/breakpoints";
-@import "./utils/colors";
+@import "./utils/index";
+// components
+@import "./components/index";
 
+// layout
 body {
   background-color: $primary;
+  display: flex;
+  font-family: "Roboto";
+  flex-direction: column;
+  height: 97vh;
+
+  .content {
+    flex: 1 0 auto;
+  }
 }

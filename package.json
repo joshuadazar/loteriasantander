@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "parcel wp-content/themes/loteriasantander/js/main.js --out-dir wp-content/themes/loteriasantander/ --out-file index.js",
-    "dev": "npm run build && node-sass --watch wp-content/themes/loteriasantander/scss -o wp-content/themes/loteriasantander/css"
+    "sass-compiler": "node-sass --watch wp-content/themes/loteriasantander/scss -o wp-content/themes/loteriasantander/css",
+    "dev": "npm run build && npm run sass-compiler"
   },
   "keywords": [],
   "author": "",
