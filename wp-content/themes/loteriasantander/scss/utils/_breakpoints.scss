@@ -61,7 +61,7 @@ $bps: (
   }
 }
 
-@mixin horizontalPaddings($value) {
+@mixin horizontalPaddings($value: 20px) {
   padding-left: $value;
   padding-right: $value;
 }

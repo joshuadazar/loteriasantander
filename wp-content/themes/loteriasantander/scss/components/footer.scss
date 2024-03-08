@@ -1,0 +1,42 @@
+@import "../utils/index";
+
+.footer {
+  font-family: $Roboto;
+  background: $gray-dark;
+  display: flex;
+  justify-content: space-between;
+
+  &__copyright,
+  &__last-updated {
+    display: flex;
+    align-items: center;
+  }
+
+  .social-media-footer {
+    display: flex;
+    align-items: center;
+
+    &:hover > .social-media-footer__title {
+      color: $primary;
+    }
+
+    &__title {
+      color: $black;
+      transition: color 5s;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      list-style: none;
+
+      &-item {
+        a > img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

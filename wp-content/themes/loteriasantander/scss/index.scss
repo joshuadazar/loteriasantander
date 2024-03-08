@@ -4,11 +4,17 @@
 
 // layout
 body {
-  background-color: $primary;
+  background-color: $gray-light;
   display: flex;
   font-family: "Roboto";
   flex-direction: column;
   height: 97vh;
+
+  .header,
+  .footer,
+  .content {
+    @include horizontalPaddings;
+  }
 
   .content {
     flex: 1 0 auto;

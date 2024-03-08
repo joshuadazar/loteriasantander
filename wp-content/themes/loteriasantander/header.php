@@ -9,12 +9,20 @@
 </head>
 <body <?php body_class(); ?>>
   <!-- Your header content goes here -->
-  <?php include 'patterns/govco-header.php'; ?>
+  <?php include 'partials/govco-header.php'; ?>
   <header class="header">
-    <?php $image_url = get_theme_mod( 'mytheme_image_setting_id', '' ); ?>
-    <img class="header__logo" src="<?php echo !empty($image_url) ? esc_url($image_url) : ''; ?>" alt="logo header">
-    <h1 class="header__title"><?php wp_title('|', true, 'right'); bloginfo('name'); ?></h1>
-    <!-- <?php $customField = get_field('header_titulo');?> -->
-    <h1 class="header__title"><?php echo $customField; ?></h1>
-    <p><?php echo get_theme_mod( 'mytheme_text_setting_id', 'Valor predeterminado' ); ?></p>
-  </header>
+    <div class="header__container">
+      <?php $image_url = get_theme_mod( 'header_logo', '' ); ?>
+     <img class="header__logo" src="<?php echo !empty($image_url) ? esc_url($image_url) : ''; ?>" alt="logo header">
+     <h1 class="header__title"><?php wp_title('|', true, 'right'); bloginfo('name'); ?></h1>
+    </div>
+    <?php
+      $today = date('Y-m-d');
+      $newDate = date('Y-m-d', strtotime($today . ' + 7 days'));
+    ?>
+    <div class="header__information-date">
+      <h3 class="header__info-title"><?php echo get_theme_mod( 'header_title', 'Siguiente Sorteo:' ); ?></h3>
+      <p class="header__info-date"><?php echo get_theme_mod( 'header_date', $newDate ); ?></p>
+    </div>
+</header>
+ 

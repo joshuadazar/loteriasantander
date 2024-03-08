@@ -1,13 +1,33 @@
 @import "../utils/index.scss";
-@import "./patterns/index.scss";
+@import "./partials/index.scss";
 
 .header {
-  background-color: $gray-light;
+  @include horizontalPaddings;
+  $self: &;
+  background-color: $primary;
   color: $black;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  .header__logo {
-    height: 50px;
-    width: 50px;
+  @include upto(tablet) {
+    flex-direction: column;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    #{$self}__logo {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  &__information-date {
+    display: flex;
+    flex-direction: column;
   }
 }
